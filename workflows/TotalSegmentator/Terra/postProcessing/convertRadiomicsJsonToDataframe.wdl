@@ -38,8 +38,7 @@ workflow radiomicsJsonConversion {
   
    File outputNotebook_radiomicsJsonToDataFrame = radiomicsJsonToDataFrame.outputNotebook_radiomicsJsonToDataFrame
    File csvFile_radiomicsJsonToDataFrame = radiomicsJsonToDataFrame.csvFile_radiomicsJsonToDataFrame 
- }
-
+   File? conversion_Errors = radiomicsJsonToDataFrame.conversion_Errors
 }
 #Task Definitions
 task radiomicsJsonToDataFrame{
@@ -86,6 +85,6 @@ task radiomicsJsonToDataFrame{
  output {
    File outputNotebook_radiomicsJsonToDataFrame = "outputNotebook_postProcessingRadiomicsJsonToDataFrame.ipynb"
    File csvFile_radiomicsJsonToDataFrame  = "rawRadiomics.csv.lz4"
-   
+   File? conversion_Errors = "error_file.txt"
  }
 }
