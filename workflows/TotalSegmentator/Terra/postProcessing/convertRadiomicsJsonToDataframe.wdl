@@ -7,7 +7,7 @@ workflow radiomicsJsonConversion {
    Array[File] rawJsonRadiomicsFiles
 
    #Docker Images for each task
-   String docker_radiomicsJsonToDataFrame = "imagingdatacommons/convert_radiomics_features_json_to_df:main"
+   String docker_radiomicsJsonToDataFrame = "imagingdatacommons/convert_radiomics_features_json_to_df"
 
    #Preemptible retries
    Int preemptibleTries_radiomicsJsonToDataFrame= 3
