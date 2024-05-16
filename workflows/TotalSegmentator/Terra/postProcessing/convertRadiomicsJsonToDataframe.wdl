@@ -66,7 +66,7 @@ task radiomicsJsonToDataFrame{
    set -o pipefail
    set +o errexit
    
-   papermill postProcessingRadiomicsJsonToDataFrame.ipynb outputNotebook_postProcessingRadiomicsJsonToDataFrame -p rawJsonRadiomicsFiles ~{sep="," rawJsonRadiomicsFiles}
+   papermill postProcessingRadiomicsJsonToDataFrame.ipynb outputNotebook_postProcessingRadiomicsJsonToDataFrame.ipynb -p rawJsonRadiomicsFiles ~{sep="," rawJsonRadiomicsFiles}
    
    set -o errexit
    exit $?
