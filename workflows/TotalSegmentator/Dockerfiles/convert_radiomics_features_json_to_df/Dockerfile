@@ -21,4 +21,5 @@ RUN pip3 install --no-cache-dir\
     ipywidgets==8.0.5\    
     jupyter==1.0.0\     
     pandas==1.5.3\    
-    papermill==2.4.0  
+    papermill==2.4.0\
+    pyarrow==16.1.0
