@@ -40,6 +40,7 @@ workflow radiomicsJsonConversion {
    File csvFile_radiomicsJsonToDataFrame = radiomicsJsonToDataFrame.csvFile_radiomicsJsonToDataFrame 
    File? conversion_Errors = radiomicsJsonToDataFrame.conversion_Errors
 }
+}
 #Task Definitions
 task radiomicsJsonToDataFrame{
  input {
