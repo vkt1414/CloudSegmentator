@@ -62,6 +62,7 @@ workflow TotalSegmentator {
    File? dicomsegAndRadiomicsSR_RadiomicsErrors = totalSegmentatorEndToEnd.dicomsegAndRadiomicsSR_RadiomicsErrors
    File? dicomsegAndRadiomicsSR_SRErrors = totalSegmentatorEndToEnd.dicomsegAndRadiomicsSR_SRErrors
    File? modality_errors= totalSegmentatorEndToEnd.modality_errors
+   File? dicomsegAndRadiomicsSR_SEGErrors = totalSegmentatorEndToEnd.dicomsegAndRadiomicsSR_SEGErrors
  }
 }
 
@@ -106,13 +107,12 @@ task totalSegmentatorEndToEnd{
    File structuredReportsJSON = "structuredReportsJSON.tar.lz4"
    File endToEndTotalSegmentator_UsageMetrics = "endToEndTotalSegmentator_UsageMetrics.lz4"
 
-
    File? dcm2niixErrors = 'error_file.txt'
    File? totalsegmentatorErrors = "totalsegmentator_errors.txt"
    File? dicomSegErrors = "itkimage2segimage_error_file.txt"  
    File? dicomsegAndRadiomicsSR_RadiomicsErrors = "radiomics_error_file.txt" 
    File? dicomsegAndRadiomicsSR_SRErrors = "sr_error_file.txt"
    File? modality_errors = "modality_error_file.txt"
-   
+   File? dicomsegAndRadiomicsSR_SEGErrors = "itkimage2segimage_error_file.txt"
  }
 }

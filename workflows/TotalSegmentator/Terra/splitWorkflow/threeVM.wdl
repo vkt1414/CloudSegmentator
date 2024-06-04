@@ -100,6 +100,7 @@ workflow TotalSegmentator {
    File? dicomsegAndRadiomicsSR_Errors = dicomsegAndRadiomicsSR.dicomsegAndRadiomicsSR_SRErrors
    File? downloadDicomAndConvert_modality_errors = downloadAndConvert.downloadDicomAndConvert_modality_errors
    File? dicomsegAndRadiomicsSR_modality_errors = dicomsegAndRadiomicsSR.dicomsegAndRadiomicsSR_modality_errors
+   File? dicomsegAndRadiomicsSR_SEGErrors = dicomsegAndRadiomicsSR.dicomsegAndRadiomicsSR_SEGErrors
  }
 }
 #Task Definitions
@@ -228,5 +229,6 @@ task dicomsegAndRadiomicsSR{
    File? dicomsegAndRadiomicsSR_RadiomicsErrors = "radiomics_error_file.txt"
    File? dicomsegAndRadiomicsSR_SRErrors = "sr_error_file.txt"   
    File? dicomsegAndRadiomicsSR_modality_errors = "modality_error_file.txt"
+   File? dicomsegAndRadiomicsSR_SEGErrors = "itkimage2segimage_error_file.txt"
  }
 }
